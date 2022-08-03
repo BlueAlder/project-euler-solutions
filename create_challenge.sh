@@ -14,13 +14,17 @@ then
   exit 1
 fi
 
-if [ -d $1 ]
+dirname=$(printf "%04d\n" $1)
+
+if [ -d $dirname ]
 then
   echo "Challenge Directory already exists"
   exit 1
 fi
 
-mkdir $1
+mkdir $dirname
+
+exit 0
 cd $1
 
 cat <<EOF > solution.py

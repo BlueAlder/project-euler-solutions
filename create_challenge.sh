@@ -14,6 +14,12 @@ then
   exit 1
 fi
 
+if [ -d $1 ]
+then
+  echo "Challenge Directory already exists"
+  exit 1
+fi
+
 mkdir $1
 cd $1
 

@@ -24,8 +24,7 @@ fi
 
 mkdir $dirname
 
-exit 0
-cd $1
+cd $dirname
 
 cat <<EOF > solution.py
 #!/usr/bin/env python3
